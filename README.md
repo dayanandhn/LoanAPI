@@ -1,3 +1,7 @@
+#LoanAPI
+After starting the tomcat server
+Requests can be done with the POSTMAN or browser http://localhost:9999/loanapi/<url-pattern>
+
 ## Welcome to Apache Tomcat!
 
 ### What Is It?
