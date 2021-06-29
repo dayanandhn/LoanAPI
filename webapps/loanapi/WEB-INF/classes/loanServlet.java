@@ -158,6 +158,7 @@ public class loanServlet extends HttpServlet {
       out.close();
    }
 
+   //POST /EMI?amount=100000&tenure=12&interest=8
    @Override
    public void doPost(HttpServletRequest request, HttpServletResponse response)
    throws ServletException, IOException{
