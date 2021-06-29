@@ -41,12 +41,10 @@ public class loanPayment extends HttpServlet {
       ) {
             String sqlStr = "INSERT INTO lpayments(L_ID, P_amount, P_date) VALUES("+lid+", "+amount+", '"+date+"')";
             stmt.executeUpdate(sqlStr);
-            sqlStr = "Select PID from lpayments where L_ID="+lid+" and P_date='"+date+"'";
+            sqlStr = "Select MAX(PID) from lpayments where L_ID="+lid;
             ResultSet rset = stmt.executeQuery(sqlStr);
             rset.next();
-            pid = rset.getInt("PID");
-            
-
+            pid = rset.getInt("MAX(PID)");
             Integer paid;
             paid = 0;
             
